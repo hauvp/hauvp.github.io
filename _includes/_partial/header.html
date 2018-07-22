@@ -22,6 +22,10 @@
 						<label>Search</label>
 						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="{{ lang.search }}" />
 					</form>
+					{% elsif site.simple_jekyll_search.enable %}
+-					<form class="search" action="{{ site.baseurl }}/search" method="get" accept-charset="utf-8">
+-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="{{ lang.search }}" />
+-					</form>
 					{% else %}
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
